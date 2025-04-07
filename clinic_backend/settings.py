@@ -100,7 +100,8 @@ DATABASES = {
         'PORT': env('DB_PORT'),
     }
 }
-print(env('DB_NAME'))  # اختبار إذا كان المتغير تم تحميله
+print(env('DB_NAME'))  
+print(env('DB_HOST'))  
 
 
 # Password validation

@@ -12,12 +12,12 @@ class User(AbstractUser):
 
     groups = models.ManyToManyField(
         'auth.Group',
-        related_name='core_user_set',  # إضافة related_name هنا
+        related_name='core_user_set', 
         blank=True,
     )
     user_permissions = models.ManyToManyField(
         'auth.Permission',
-        related_name='core_user_permissions_set',  # إضافة related_name هنا
+        related_name='core_user_permissions_set',  
         blank=True,
     )
 

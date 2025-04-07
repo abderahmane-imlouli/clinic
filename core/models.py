@@ -10,6 +10,17 @@ class User(AbstractUser):
     ]
     role = models.CharField(max_length=10, choices=ROLE_CHOICES)
 
+    groups = models.ManyToManyField(
+        'auth.Group',
+        related_name='core_user_set',  # إضافة related_name هنا
+        blank=True,
+    )
+    user_permissions = models.ManyToManyField(
+        'auth.Permission',
+        related_name='core_user_permissions_set',  # إضافة related_name هنا
+        blank=True,
+    )
+
 class Specialty(models.Model):
     name = models.CharField(max_length=100)
 

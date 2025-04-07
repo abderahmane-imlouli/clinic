@@ -83,7 +83,11 @@ import environ
 # تحميل إعدادات البيئة من ملف .env
 env = environ.Env()
 # قراءة القيم من ملف .env
-environ.Env.read_env(os.path.join(os.path.dirname(BASE_DIR), '.env')) 
+# تحديد المسار إلى ملف .env الموجود في مجلد config
+env_file = os.path.join(os.path.dirname(__file__), '..', 'config', '.env')
+
+# قراءة ملف .env
+env.read_env(env_file)
 
 # استخدام القيم من ملف .env لإعداد قاعدة البيانات
 DATABASES = {

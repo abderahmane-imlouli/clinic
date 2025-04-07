@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-g_vl*a1#7^8uljhe5^2=m#n2699b7)kz-i4@q%g3w-js75@oz_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['render.com', 'localhost', '127.0.0.1']
 
 
 
@@ -100,8 +100,7 @@ DATABASES = {
         'PORT': env('DB_PORT'),
     }
 }
-print(env('DB_NAME'))  
-print(env('DB_HOST'))  
+
 
 
 # Password validation

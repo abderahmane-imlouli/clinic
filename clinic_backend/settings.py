@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-g_vl*a1#7^8uljhe5^2=m#n2699b7)kz-i4@q%g3w-js75@oz_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.onrender.com', 'localhost', '127.0.0.1']
+
 
 
 # Application definition
@@ -82,7 +83,7 @@ import environ
 # تحميل إعدادات البيئة من ملف .env
 env = environ.Env()
 # قراءة القيم من ملف .env
-environ.Env.read_env()
+environ.Env.read_env(os.path.join(os.path.dirname(BASE_DIR), '.env')) 
 
 # استخدام القيم من ملف .env لإعداد قاعدة البيانات
 DATABASES = {
@@ -95,6 +96,7 @@ DATABASES = {
         'PORT': env('DB_PORT'),
     }
 }
+print(env('DB_NAME'))  # اختبار إذا كان المتغير تم تحميله
 
 
 # Password validation

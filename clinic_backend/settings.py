@@ -84,7 +84,7 @@ import environ
 env = environ.Env()
 # قراءة القيم من ملف .env
 # تحديد المسار إلى ملف .env الموجود في مجلد config
-env_file = os.path.join(os.path.dirname(__file__), '../config/.env')
+env_file = os.path.join(os.path.dirname(__file__), '../../config/.env')
 
 # قراءة ملف .env
 env.read_env(env_file)

@@ -10,3 +10,12 @@ __pycache__/
 
 # تجاهل ملفات قواعد البيانات المحلية
 db.sqlite3
+# تجاهل ملفات Docker
+docker-compose.yml
+Dockerfile
+
+# تجاهل ملفات بيئة Heroku
+Procfile
+
+# تجاهل ملفات Build أو إعدادات CI/CD الخاصة بـ Netlify/Render
+netlify.toml
